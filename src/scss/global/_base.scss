@@ -57,7 +57,7 @@ $sp:    428px;  // スマホ
 //-------------------------------
 //  font-family
 //-------------------------------
-$font:"Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", Meiryo, sans-serif;;
+$font: "Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", Meiryo, sans-serif;;
 $josefin: 'Josefin Sans', sans-serif;;
 //-------------------------------
 //  color
@@ -94,19 +94,18 @@ html{
     //計算式：10px /  デザインカンプの横幅 * 100
     //画面サイズがデザインカンプ幅の時font-size = 10pxになる
     //---------------------------------------------------
-    font-size: calc(10 / 1920 * 100) + vw;
-    @include pc{
-        font-size: calc(10 / 1200 * 100) + vw;
-    }
-    @include tab{
-        font-size: calc(10 / 856 * 100) + vw;
-    }
-    @include sp{
-        font-size: calc(10 / 428 * 100) + vw;
-    }
+    // font-size: calc(10 / 1920 * 100) + vw;
+    // @include pc{
+    //     font-size: calc(10 / 1200 * 100) + vw;
+    // }
+    // @include tab{
+    //     font-size: calc(10 / 856 * 100) + vw;
+    // }
+    // @include sp{
+    //     font-size: calc(10 / 428 * 100) + vw;
+    // }
 }
 body{
-  background-image: url("images/powerPlay-background.svg");
   font-family: $font;
   &.fixed{
     overflow: hidden;

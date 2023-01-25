@@ -43,10 +43,10 @@ module.exports = {
         test: /\.scss/,
         use:[
           // CSSファイルを書き出すオプションを有効にする
-          // {
-          //   loader: MiniCssExtractPlugin.loader,
-          // },
-          "style-loader",
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          // "style-loader",
           {
             loader:"css-loader",
             options:{
@@ -128,9 +128,9 @@ module.exports = {
 
 
     // CSSファイルを外出しにするプラグイン
-    // new MiniCssExtractPlugin({
-    //   // ファイル名を設定します
-    //   filename: "style.css",
-    // }),
+    new MiniCssExtractPlugin({
+      // ファイル名を設定します
+      filename: "style.css",
+    }),
   ],
 };
