@@ -659,12 +659,22 @@ a[href^="tel:"] {
 }
 .header {
   width: 100%;
+  min-height: 100px;
   padding: 20px;
-  background-color: #ffffff;
-  border-bottom: solid 1px, #cccccc;
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: #f5f5f5;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 40px;
+  color: #575757;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .container {
@@ -710,6 +720,13 @@ a[href^="tel:"] {
   .wide-container {
     width: 92.523364486%;
   }
+}
+
+.footer {
+  width: 100%;
+  min-height: 300px;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
 .btn_grad_orange {

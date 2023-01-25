@@ -13,13 +13,16 @@
             <div class="header__inner container">
                 <h1 class="header_logo">
                     <a href="<?php echo esc_url(home_url()); ?>" class="logo">
-                        <span>
-                            bbPress
-                        </span>                        
+                        bbPress
                     </a>
                 </h1>
-                <div class="button header__button">
-                    <a href="#contact"><span class="button__icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/ion_mail.svg" width="28" height="28" alt="mail"></span><span class="button__label">お問い合わせ</span></a>
+                <div class="header__login">
+                    <?php if(!is_user_logged_in()):?>
+                    <a href="<?php echo esc_url(home_url('login')); ?>" class="loginButton">ログイン</a>
+                    <?php else :?>
+                    <a href="<?php echo wp_nonce_url(add_query_arg('action', 'do_logout'), 'do_logout', 'token'); ?>" class="logoutButton">ログアウト</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </header>
+        <div class="container">

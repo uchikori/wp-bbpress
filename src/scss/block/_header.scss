@@ -2,10 +2,15 @@
 // ヘッダー
 .header{
     width: 100%;
+    min-height: 100px;
     padding: 20px;
-    background-color: g.$color-white;
-    border-bottom: solid 1px, g.$color-grey;
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-color: #f5f5f5;
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.logo{
+    @include g.font-style(40px, g.$color-dark, 700, 1, 0);
 }
